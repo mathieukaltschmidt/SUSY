@@ -1,0 +1,119 @@
+%Personel Data
+\title{The Minimally Supersymmetric Standard Model}
+\subtitle{Part XY: Whatever fits in here}
+\author{Mathieu Kaltschmidt}
+\date{February 15th, 2021}
+
+%Colors
+\usepackage{xcolor}
+\definecolor{MyRed}{RGB}{157,0,0}
+\definecolor{MyBlue}{RGB}{1,1,141}
+\definecolor{MyGreen}{RGB}{0, 119, 85}
+\definecolor{MyGray}{RGB}{102, 102, 142}
+
+%Section numbering
+%\renewcommand*\thesection{\arabic{section}.}
+
+%Page Layout and geometry
+\usepackage{fancyhdr}
+\fancyhfoffset{0pt}
+
+\usepackage[a4paper,
+			width = 150mm,
+			top = 30mm,
+		    bottom=30mm,
+		    %bindingoffset = 5mm,
+		    ]{geometry}
+\usepackage[onehalfspacing]{setspace}
+
+
+%page layout 
+\makeatletter
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize\nouppercase\leftmark}
+\fancyhead[R]{\footnotesize\nouppercase\@title}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0pt}
+\makeatother
+
+%Headings
+\setkomafont{section}{\textsf\bfseries\Large}
+\setkomafont{subsection}{\textsf\bfseries\large}
+\setkomafont{subsubsection}{\textsf\bfseries\normalsize}
+
+
+%Math and Units
+\usepackage{amsmath, amssymb, commath, mathtools}
+\usepackage{physics}
+\usepackage{slashed}
+\usepackage{xfrac}
+\usepackage[separate-uncertainty]{siunitx}
+\usepackage{relsize} %larger math symbols
+\usepackage{bbm}
+\usepackage{chngcntr}
+\usepackage[amsmath,thmmarks,hyperref]{ntheorem}
+\usepackage{ wasysym }
+
+%Proofs
+\theoremstyle{nonumberbreak}
+\theoremseparator{} 
+\theoremsymbol{\ensuremath{\square}}
+\newtheorem{proof}{\textit{Proof.}}
+
+%Tables
+\usepackage{array} %math mode in tables
+\usepackage{booktabs} %hline rules
+
+%Language Settings and Microtype
+\usepackage{fontspec, xunicode}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\setmainfont{Palatino}
+\setsansfont{Optima}
+\setmonofont[Scale=MatchLowercase]{Menlo}
+\usepackage{polyglossia}
+\setmainlanguage{english}
+\setotherlanguages{german, french}
+\usepackage{microtype}
+\usepackage{scrextend} %footnote alignment
+\deffootnote[10pt]{10pt}{10pt}{\makebox[15pt][l]{\thefootnotemark.\hspace{10pt}}}
+\usepackage{csquotes}
+%Useful Packages
+\usepackage{graphicx} %including images
+\usepackage{float} %better positioning for float environments
+\usepackage{blindtext} %for testing the output
+\usepackage[labelfont=bf]{caption} %nice captions
+%\captionsetup[figure]{labelsep=space}
+%\captionsetup[table]{labelsep=space}
+\usepackage{subcaption} %for multiple plots
+\usepackage{tikz}
+\usetikzlibrary{patterns, decorations.markings}
+\usepackage{tcolorbox}
+%\setlength{\footnotesep}{\baselineskip}
+
+%Appendix and Bibliography
+\usepackage[toc,page]{appendix}
+
+\usepackage{etoolbox}
+\appto\appendix{\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}}
+
+% reinstate the correct level for list of tables and figures
+\appto\listoffigures{\addtocontents{lof}{\protect\setcounter{tocdepth}{1}}}
+\appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{1}}}
+
+\usepackage[
+	style=numeric-comp,
+	backend=biber,
+	isbn=false,
+	date=year,
+	url=false,
+	doi=false,
+	hyperref = auto, ,backref, backrefstyle=none
+]{biblatex}
+\addbibresource{bibliography/susy.bib}
+
+%Colorlinks etc.
+\usepackage[colorlinks=True]{hyperref}
+\hypersetup{linkcolor=MyBlue, citecolor = MyGreen, urlcolor=MyBlue}

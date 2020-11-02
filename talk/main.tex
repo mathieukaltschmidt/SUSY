@@ -1,0 +1,35 @@
+\documentclass[10pt]{beamer}
+
+%Useful settings 
+\include{metadata/settings}
+
+%Main document
+\begin{document}
+\pagenumbering{roman}
+\begin{frame}[plain]
+\maketitle
+\end{frame}
+
+\begin{frame}[plain]{Outline}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+%Content
+\pagenumbering{arabic}
+\include{content/00_introduction}
+
+
+
+
+%Appendices
+\appendix
+\begin{frame}[%allowframebreaks, 
+			  plain,
+			  shrink=10]{References}
+\nocite{*}
+\printbibliography
+\end{frame}
+
+
+\end{document}
