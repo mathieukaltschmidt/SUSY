@@ -1,0 +1,14 @@
+
+Contents (Preliminary)
+
+First Part: (Jonah?)
+
+- Standard Model Basics + Concepts
+- From SM to MSSM
+- Complications ?
+- Parameter count
+
+Second Part: (Mathieu?)
+
+- MSSM Pheno (not too much LHC, contact people wo give the talk on LHC Pheno)
+- Gauge Coupling Unification
