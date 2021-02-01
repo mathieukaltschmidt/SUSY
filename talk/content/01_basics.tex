@@ -1,0 +1,276 @@
+% !TEX root = ../main.tex
+% !TEX program = xelatex
+% !TEX encoding = utf8
+% !TEX spellcheck = en_UK
+
+\section{The Standard Model — Basics}
+\begin{frame}{Standard Model — The Basics}
+\only<1, 2, 4>{The gauge group of the Standard Model (SM) is
+\begin{align}
+  \mathcal{G}_\mathrm{SM}&=\su(3)_C\times\su(2)_T\times\un(1)_Y.
+\end{align}}
+\only<3>{
+Beware! We only use lefthanded fields $\psi_L=\vect{\psi_\alpha\\0}$, righthanded fields are included via charge conjugation $\left(\psi_R\right)^c=\vect{0\\\overline{\psi}^{\dot{\alpha}}}^c=\vect{\psi_\alpha\\0}.$
+\vfill
+The $\su(2)$-doublets are written as:
+\begin{align*}
+\phi=\vect{\phi_+\\\phi_0}\quad\quad q_L=\vect{u_L\\d_L}\quad\quad\ell_L=\vect{\nu_L\\e_L}.
+\end{align*}
+}
+\only<2, 4>{\vfill
+The SM fields transform in representations of this group:
+\begin{align}
+s&=0:\quad\underset{\ni\phi}{\rep{1}{2}{\frac12}}\\
+s&=\frac12:\quad\underset{\ni q_L}{\rep{3}{2}{\frac16}}\oplus\underset{\ni(d_R)^c}{\crep{3}{1}{\frac13}}\oplus\underset{\ni(u_R)^c}{\crep{3}{1}{-\frac23}}\oplus\underset{\ni\ell_L}{\rep{1}{2}{-\frac12}}\oplus\underset{\ni(e_R)^c}{\rep{1}{1}{1}}\\
+s&=1:\quad\underset{\ni{A}^a_\mu}{\rep{8}{1}{0}}\oplus\underset{\ni W^k_\mu}{\rep{1}{3}{0}}\oplus\underset{\ni B_\mu}{\rep{1}{1}{0}}.
+\end{align}
+}
+\end{frame}
+\begin{frame}{Standard Model — The Lagrangian}
+The SM Lagrangian contains a variety of terms which roughly fall into three categories:
+\begin{table}
+\begin{tabular}{ccccc}&&&&\\
+  gauge terms&& kinetic terms&& Higgs sector
+\end{tabular}
+\end{table}
+
+The gauge part is straightforward albeit there being additional gauge configurations:
+\begin{align}
+  \mathcal{L}_\text{gauge}&\supset\frac1{2g_i^2}\tr\left[F^{(i)}_{\mu\nu}F^{(i)\mu\nu}\right]\\
+  &\supset\frac{\theta_\mathrm{QCD}}{16\pi^2g_\mathrm{s}^2}\epsilon^{\mu\nu\rho\sigma}\tr\left[F^{(3)}_{\mu\nu}F^{(3)}_{\rho\sigma}\right].
+\end{align}
+Kinetic terms for the fermions are constructed with the covariant derivative
+\begin{align}
+  \mathcal{L}_\mathrm{kin}&\supset\overline{\psi}_i\imag\slashed{D}\psi_i\\
+  D_\mu&=\partial_\mu-\imag qA^k_\mu\mathcal{R}(T_k)
+\end{align}
+\end{frame}
+
+\begin{frame}{Standard Model — Higgs sector}
+The Higgs part is made of a scalar kinetic term, the quartic potential and the Yukawa couplings:
+\begin{align}
+  \mathcal{L}_\mathrm{Higgs}\supset-\left(D^\mu\phi\right)^\dagger\left(D_\mu\phi\right)+\mu\phi^\dagger\phi-\lambda\left(\phi^\dagger\phi\right)^2-\lambda^\psi\left[\overline{\psi}\phi\psi\right]_\numb{1}.
+\end{align}
+\only<2>{
+The fermions gain masses \mbox{$m_\psi=v\lambda^\psi$} when the Higgs field acquires its vacuum expectation value (VEV):
+\begin{align*}
+  \left\langle\phi\right\rangle&=\left(\begin{array}{c}0\\v\end{array}\right)\kern4em\left(\text{shorthand: }\left\langle\phi_0\right\rangle=v\right).
+\end{align*}
+}
+\only<3, 4>{
+For our three types of massive fermions (electron, up-quark, down-quark) the corresponding singlets look like:\footnote{Careful, since $\tilde{\phi}=\epsilon\phi^*$ to account for the u-type quarks.}
+\begin{align}
+\lambda^u\left[\overline{q}_L\tilde{\phi}u_R\right]_\numb{1}\quad\quad\lambda^d\left[\overline{q}_L\phi d_R\right]_\numb{1}\quad\quad\lambda^e\left[\overline{\ell}_L\phi e_R\right]_\numb{1}.
+\end{align}
+\only<4>{
+Furthermore, the SM consists of three generations of fermions thus promoting the $\lambda^\psi$ to complex 3x3 matrices $\lambda^e_{mn}$, $\lambda^d_{mn}$ and $\lambda^u_{mn}$. The $\lambda^f_{mn}$ can be diagonalised via bi-unitary transformations:
+\begin{align}
+  V_f^\dagger\lambda^fU_f&\propto\operatorname{diag}\left(m^{(1)}_f, m^{(2)}_f, m^{(3)}_f\right).
+\end{align}
+}
+}
+\end{frame}
+\begin{frame}{Standard Model — Parameter count}
+Count parameters and gauge redundancies:
+\vfill
+\only<1, 2, 3>{$+$
+\begin{itemize}
+\item 3 couplings $g$, $g'$ and $g_\mathrm{s}$, one vacuum angle $\theta_\mathrm{QCD}$ (4 parameters)
+\item Higgs parameters $v$, $\lambda$ (2 parameters)
+\item 3 (complex) mass matrices $\lambda^f$ (3x18 parameters)
+\end{itemize}
+}\only<2, 3>{$-$
+\begin{itemize}
+\item Quark flavour symmetry $\un(3)_{q_L}\times\un(3)_{u_R}\times\un(3)_{d_R}/\un(1)_B$ (3x9-1 parameters)
+\item Lepton flavour symmetry $\un(3)_{\ell_L}\times\un(3)_{e_R}/\un(1)_{L_e}\times\un(1)_{L_\mu}\times\un(1)_{L_\tau}$ (2x9-3 parameters)
+\end{itemize}
+}\vfill
+\only<3>{The Standard Model of Particle Physics has 19 free parameters with $v$ being the only one carrying a physical dimension.\footnote{15 real parameters, 3 mixing angles, 1 CP-violating phase.}}
+\end{frame}
+
+\begin{frame}{MSSM — The fields}
+First of all we promote all our previous fields to real (chiral) superfields resulting in our renewed table:\vfill
+\begin{table}
+\begin{tabular}{cccl}
+  super field& bosonic field& fermionic field& representation\\\hline
+  $\hat{V}_8$& $g$& $\tilde{g}$& $\quad\quad\rep{8}{1}{0}$\\
+  $\hat{V}$& $W^0$, $W^\pm$& $\tilde{W}^0$, $\tilde{W}^\pm$& $\quad\quad\rep{1}{3}{0}$\\
+  $\hat{V}'$& $B$& $\tilde{B}$& $\quad\quad\rep{1}{1}{0}$\\
+  $\hat{L}$& $\left(\tilde{\nu}_e, \tilde{e}\right)$& $\left(\nu_L, e_L\right)$& $\quad\quad\rep{1}{2}{-\frac12}$\\
+  $\hat{E}^c$& $\tilde{e}_R^c$& $e_R^c$& $\quad\quad\rep{1}{1}{1}$\\
+  $\hat{Q}$& $\left(\tilde{u}_L, \tilde{d}_L\right)$& $\left(u_L, d_L\right)$& $\quad\quad\rep{3}{1}{\frac16}$\\
+  $\hat{U}^c$& $\tilde{u}_R^c$& $u_R^c$& $\quad\quad\rep{3}{1}{-\frac23}$\\
+  $\hat{D}^c$& $\tilde{d}_R^c$& $d_R^c$& $\quad\quad\rep{3}{1}{\frac13}$\\
+  $\hat{H}_u$& $\left(H_u^+, H_u^0\right)$& $\left(\tilde{H}_u^+, \tilde{H}_u^0\right)$& $\quad\quad\rep{1}{2}{\frac12}$\\
+  $\hat{H}_d$& $\left(H_d^0, H_d^-\right)$& $\left(\tilde{H}^0_d, \tilde{H}_d^-\right)$& $\quad\quad\rep{1}{2}{-\frac12}$
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{MSSM — SUSY terms}
+For the gauge part the ususal field strength super fields $\mathcal{W}_{i, \alpha}$ are constructed and included in the Lagrangian:
+\begin{align}
+  \mathcal{L}^\mathrm{MSSM}_\mathrm{gauge}\supset&\frac1{2g_i^2}\tr\left[\int\dd^2\theta\left(\mathcal{W}_i\right)^\alpha\left(\mathcal{W}_i\right)_\alpha+\hc\right].
+\end{align}
+The kinetic terms for the fields read:
+\begin{align}
+  \mathcal{L}^\mathrm{MSSM}_K\supset&\int\dd^2\theta\dd^2\bar{\theta}\left[\hat{\Phi}^\dagger_ie^{2V_i}\hat{\Phi}_i\right]_\numb{1}\\
+  V_i=&\hat{V}_8^a\mathcal{R}_i(T_a)+\hat{V}^k\mathcal{R}_i(T_k)+Y_i\hat{V}'.
+\end{align}
+\end{frame}
+
+\begin{frame}{MSSM — Superpotential}
+The superpotential term is simply:
+\begin{align}
+  \mathcal{L}^\mathrm{MSSM}_W=&\int\dd^2\theta W+\hc
+\end{align}
+\only<1>{What terms are contained in $W$?}
+\only<2, 3, 4>{
+In general, the superpotential contains a great variety of different terms, under them the Yukawa couplings:
+\begin{align}\nonumber
+  W=&\lambda_d\left[H_dQU\right]_\numb{1}+\lambda_d\left[H_dLE\right]_\numb{1}-\lambda_u\left[H_uQU\right]_\numb{1}+\mu \left[H_uH_d\right]_\numb{1}\\
+  &+a\left[\hat{L}\hat{H_u}\right]_\numb{1}+b\left[\hat{Q}\hat{L}\hat{D}\right]_\numb{1}+c\left[\hat{U}\hat{U}\hat{D}\right]_\numb{1}+d\left[\hat{L}\hat{L}\hat{E}\right]_\numb{1}.
+\end{align}
+}
+\only<3>{
+The terms in the last line introduce $B$-number violation via proton decay as well as lepton number violation, but by imposing $R$-parity
+\begin{align}
+  R=(-1)^{3(B-L)+2s},
+\end{align}
+we can get rid of them. Beware! This is not obligatory!
+
+$R$-conservation implies the existance of a lightest supersymmetric particle (LSP) thus providing us with a dark matter candidate.
+}
+\only<4>{
+We could use \textit{matter parity}
+\begin{align}
+P_\mathrm{m}&=(-1)^{3(B-L)},
+\end{align}
+instead and see directly how the lower line gets thrown out.
+}
+\end{frame}
+
+\begin{frame}{MSSM — Soft SUSY breaking terms}
+Introduce explicitly SUSY breaking terms to generate masses and additional interactions
+\begin{align}\nonumber
+  -\mathcal{L}^\mathrm{MSSM}_\mathrm{soft}\supset&\frac12M_i\tilde{\lambda}_i\tilde{\lambda}_i+M^2_{\tilde{F}}\tilde{f}^\dagger\tilde{f}\\
+  &+m_1^2H_d^\dagger H_d+m_2^2H_u^\dagger H_u+m_{12}^2\left(H_uH_d+\hc\right)\\\nonumber
+  &+T_UH_uQU+T_DH_dQD+T_EH_dLE+\hc
+\end{align}
+Often, a parametrisation $m_{12}^2=\mu B$ (and $T_F=\lambda_f A_F$) is chosen. Therefore, the corresponding terms are called A and B-terms.
+\end{frame}
+
+\begin{frame}{MSSM — Note on the Higgs sector}
+Repeat the SM steps:
+\only<1, 2>{
+In the MSSM the quartic coupling is generated by the kinetic and soft SUSY breaking terms leading to an effective Higgs potential.
+\begin{align}\nonumber
+  V_\mathrm{Higgs}=&\left(m_1^2+|\mu|^2\right)H_d^\dagger H_d+\left(m_2^2+|\mu|^2\right)H_u^\dagger H_u+m_{12}^2\left(H_u\cdot H_d+\hc\right)\\
+  &+\frac{g^2+{g'}^2}8\left(H_d^\dagger H_d-H_u^\dagger H_u\right)+\frac12g^2\left|H_d^\dagger H_u\right|^2,
+\end{align}
+}
+\only<2>{
+The two doublets acquire separate VEVs:
+\begin{align}
+  \left\langle H_f^0\right\rangle=v_f,
+\end{align}
+related to the previous $v$ via:
+\begin{align}
+  \sqrt{v_u^2+v_d^2}&=v,
+\end{align}
+by convention the angle $\beta$ is defined as
+\begin{align}
+  \tan\beta&=\frac{v_u}{v_d}.
+\end{align}
+}
+\end{frame}
+
+\begin{frame}{MSSM — Mixing in the particle spectrum}
+\only<1, 2, 3, 4, 5>{The SM particle spectrum looks like:}
+\only<1>{
+\begin{table}
+\begin{tabular}{cccccc}
+$u$& $c$& $t$&& $\color{red}{B}$& $\color{red}{W^0}$\\
+$d$& $s$& $b$&& $g$& $W^\pm$\\\\
+$e$& $\mu$& $\tau$&& $h^0$&\\
+$\nu_e$& $\nu_\mu$& $\nu_\tau$&&&
+\end{tabular}
+\end{table}
+}
+\only<2>{
+\begin{table}
+\begin{tabular}{cccccc}
+$u$& $c$& $t$&& $\color{red}{B}$& $\color{red}{W^0}$\\
+$d$& $s$& $b$&& $g$& $W^\pm$\\\\
+$e$& $\mu$& $\tau$&& $\color{purple}{H_d^-}$&$\color{orange}{H_d^0}$\\
+$\nu_e$& $\nu_\mu$& $\nu_\tau$&&$\color{orange}{H_u^0}$&$\color{purple}{H_u^+}$
+\end{tabular}
+\end{table}
+}
+\only<3, 4, 5>{
+\begin{table}
+\begin{tabular}{cccccc}
+$u$& $c$& $t$&& $\color{red}{\gamma}$& $\color{red}{Z^0}$\\
+$d$& $s$& $b$&& $g$& $W^\pm$\\\\
+$e$& $\mu$& $\tau$&& $\color{orange}{h^0}$&$\color{orange}{H^0}$\\
+$\nu_e$& $\nu_\mu$& $\nu_\tau$&&$A^0$&$\color{purple}{H^\pm}$
+\end{tabular}
+\end{table}
+}
+\only<4, 5>{The MSSM particle spectrum\only<5>{\footnote{Worst case scenario.}} looks like:}
+\only<4>{
+\begin{table}
+\begin{tabular}{ccccccccc}
+$\color{olive}{\tilde{u}_L}$&$\color{olive}{\tilde{u}_R}$&$\color{olive}{\tilde{c}_L}$&$\color{olive}{\tilde{c}_R}$&$\color{olive}{\tilde{t}_L}$&$\color{olive}{\tilde{t}_R}$&&$\color{red}{\tilde{B}}$&$\color{red}{\tilde{W}^0}$\\
+$\color{cyan}{\tilde{d}_L}$&$\color{cyan}{\tilde{d}_R}$&$\color{cyan}{\tilde{s}_L}$&$\color{cyan}{\tilde{s}_R}$&$\color{cyan}{\tilde{b}_L}$&$\color{cyan}{\tilde{b}_R}$&&$\tilde{g}$&$\color{orange}{\tilde{W}^\pm}$\\\\
+$\color{purple}{\tilde{e}_L}$&$\color{purple}{\tilde{e}_R}$&$\color{purple}{\tilde{\mu}_L}$&$\color{purple}{\tilde{\mu}_R}$&$\color{purple}{\tilde{\tau}_L}$&$\color{purple}{\tilde{\tau}_R}$&&$\color{orange}{\tilde{H}_d^-}$&$\color{red}{\tilde{H}^0_d}$\\
+$\color{brown}{\tilde{\nu}_e}$&&$\color{brown}{\tilde{\nu}_\mu}$&&$\color{brown}{\tilde{\nu}_\tau}$&&&$\color{red}{\tilde{H}_u^0}$&$\color{orange}{\tilde{H}^+_u}$
+\end{tabular}
+\end{table}
+}
+\only<5>{
+\begin{table}
+\begin{tabular}{ccccccccc}
+$\color{olive}{\tilde{q}_1}$&$\color{olive}{\tilde{q}_2}$&$\color{olive}{\tilde{q}_3}$&$\color{olive}{\tilde{q}_4}$&$\color{olive}{\tilde{q}_5}$&$\color{olive}{\tilde{q}_6}$&&$\color{orange}{\tilde{\chi}^\pm_1}$&$\color{orange}{\tilde{\chi}^\pm_2}$\\
+$\color{cyan}{\tilde{q}'_1}$&$\color{cyan}{\tilde{q}'_2}$&$\color{cyan}{\tilde{q}'_3}$&$\color{cyan}{\tilde{q}'_4}$&$\color{cyan}{\tilde{q}'_5}$&$\color{cyan}{\tilde{q}'_6}$&&$\tilde{g}$&\\\\
+$\color{purple}{\tilde{\ell}_1}$&$\color{purple}{\tilde{\ell}_2}$&$\color{purple}{\tilde{\ell}_3}$&$\color{purple}{\tilde{\ell}_4}$&$\color{purple}{\tilde{\ell}_5}$&$\color{purple}{\tilde{\ell}_6}$&&$\color{red}{\tilde{\chi}^0_1}$&$\color{red}{\tilde{\chi}^0_2}$\\
+$\color{brown}{\tilde{\nu}_1}$&&$\color{brown}{\tilde{\nu}_2}$&&$\color{brown}{\tilde{\nu}_3}$&&&$\color{red}{\tilde{\chi}^0_3}$&$\color{red}{\tilde{\chi}^0_4}$
+\end{tabular}
+\end{table}
+}
+\only<6>{
+Summary of mixed states:
+\begin{itemize}
+\item The charged gauginos ($\tilde{W}^\pm$, $\tilde{H}_u^+$, $\tilde{H}_d^-$) form the charginos $\tilde{\chi}^\pm_i$.
+\item The neutral gauginos ($\tilde{B}$, $\tilde{W}^0$, $\tilde{H}_u^0$, $\tilde{H}_d^0$) form the neutralinos $\tilde{\chi}^0_i$.
+\item The squarks ($\tilde{q}_{i, L}$, $\tilde{q}_{i, R}$) form mass eigenstates labeled $\tilde{q}_i$.
+\item The sleptons ($\tilde{e}_{i, L}$, $\tilde{e}_{i, R}$) form eigenstates $\tilde{\ell}_i$.
+\item The Higgs bosons ($H_d^-$, $H_d^0$, $H_u^0$, $H_u^+$) form: a charged pair $H^\pm$, two CP-even neutral scalars $h^0$, $H^0$ and a CP-odd $A^0$.
+\end{itemize}
+Only for certain ranges of the parameters the particle spectrum will resemble a 'double-SM'.
+}
+\end{frame}
+
+\begin{frame}{MSSM — Parameter count}
+\only<1, 2, 3, 4>{$+$
+\begin{itemize}
+\item 3 couplings $g_i$, one vacuum angle $\theta_\mathrm{QCD}$ (4 parameters)
+\item 3 (complex) gaugino masses $M_i$ (6 parameters)
+\item 2 Higgs mass parameters $v$, $\beta$ (2 parameters)
+\item 2 (complex) Higgs/ino mass parameters $\mu$, $B$ (4 parameters)
+\item 5 hermitian scalar mass matrices $M^2_{\tilde{F}}$ (5x9 parameters) 
+\item 3 mass matrices $\lambda^f$ (3x18 parameters)
+\item 3 trilinear couplings $T_F$ (3x18 parameters)
+\end{itemize}
+}\only<2, 3, 4>{$-$
+\begin{itemize}
+\item Flavour symmetry $\un(3)^5/\un(1)^2$ (5x9-2 parameters)
+\end{itemize}
+}\only<3, 4>{$+$
+\begin{itemize}
+\item R- and Peccei-Quinn symmetry $\un(1)_R\times\un(1)_\mathrm{PQ}$ (2 parameters)
+\end{itemize}}
+\vfill
+\only<4>{The full Minimal Supersymmetric Standard Model has 124 free parameters\footnote{Consisting of 3 couplings, 37 real masses, 39 mixing angles and 45 CP-violating phases.} (MSSM-124).}
+%105 new parameters 5r 3cp gaug higgsino, 21 sfermion masses, 36 mix angl, 40 cp
+\end{frame}
