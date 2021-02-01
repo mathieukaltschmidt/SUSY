@@ -58,9 +58,9 @@ The fermions gain masses \mbox{$m_\psi=v\lambda^\psi$} when the Higgs field acqu
 \end{align*}
 }
 \only<3, 4>{
-For our three types of massive fermions (electron, up-quark, down-quark) the corresponding singlets look like:\footnote{Careful, since $\tilde{\phi}=\epsilon\phi^*$ to account for the u-type quarks.}
+For our three types of massive fermions (electron, up-quark, down-quark) the corresponding singlets look like:\footnote{Careful, since $\mytilde{\phi}=\epsilon\phi^*$ to account for the u-type quarks.}
 \begin{align}
-\lambda^u\left[\overline{q}_L\tilde{\phi}u_R\right]_\numb{1}\quad\quad\lambda^d\left[\overline{q}_L\phi d_R\right]_\numb{1}\quad\quad\lambda^e\left[\overline{\ell}_L\phi e_R\right]_\numb{1}.
+\lambda^u\left[\overline{q}_L\mytilde{\phi}u_R\right]_\numb{1}\quad\quad\lambda^d\left[\overline{q}_L\phi d_R\right]_\numb{1}\quad\quad\lambda^e\left[\overline{\ell}_L\phi e_R\right]_\numb{1}.
 \end{align}
 \only<4>{
 Furthermore, the SM consists of three generations of fermions thus promoting the $\lambda^\psi$ to complex 3x3 matrices $\lambda^e_{mn}$, $\lambda^d_{mn}$ and $\lambda^u_{mn}$. The $\lambda^f_{mn}$ can be diagonalised via bi-unitary transformations:
@@ -93,16 +93,16 @@ First of all we promote all our previous fields to real (chiral) superfields res
 \begin{table}
 \begin{tabular}{cccl}
   super field& bosonic field& fermionic field& representation\\\hline
-  $\hat{V}_8$& $g$& $\tilde{g}$& $\quad\quad\rep{8}{1}{0}$\\
-  $\hat{V}$& $W^0$, $W^\pm$& $\tilde{W}^0$, $\tilde{W}^\pm$& $\quad\quad\rep{1}{3}{0}$\\
-  $\hat{V}'$& $B$& $\tilde{B}$& $\quad\quad\rep{1}{1}{0}$\\
-  $\hat{L}$& $\left(\tilde{\nu}_e, \tilde{e}\right)$& $\left(\nu_L, e_L\right)$& $\quad\quad\rep{1}{2}{-\frac12}$\\
-  $\hat{E}^c$& $\tilde{e}_R^c$& $e_R^c$& $\quad\quad\rep{1}{1}{1}$\\
-  $\hat{Q}$& $\left(\tilde{u}_L, \tilde{d}_L\right)$& $\left(u_L, d_L\right)$& $\quad\quad\rep{3}{1}{\frac16}$\\
-  $\hat{U}^c$& $\tilde{u}_R^c$& $u_R^c$& $\quad\quad\rep{3}{1}{-\frac23}$\\
-  $\hat{D}^c$& $\tilde{d}_R^c$& $d_R^c$& $\quad\quad\rep{3}{1}{\frac13}$\\
-  $\hat{H}_u$& $\left(H_u^+, H_u^0\right)$& $\left(\tilde{H}_u^+, \tilde{H}_u^0\right)$& $\quad\quad\rep{1}{2}{\frac12}$\\
-  $\hat{H}_d$& $\left(H_d^0, H_d^-\right)$& $\left(\tilde{H}^0_d, \tilde{H}_d^-\right)$& $\quad\quad\rep{1}{2}{-\frac12}$
+  $\myhat{V}_8$& $g$& $\mytilde{g}$& $\quad\quad\rep{8}{1}{0}$\\
+  $\myhat{V}$& $W^0$, $W^\pm$& $\mytilde{W}^0$, $\mytilde{W}^\pm$& $\quad\quad\rep{1}{3}{0}$\\
+  $\myhat{V}'$& $B$& $\mytilde{B}$& $\quad\quad\rep{1}{1}{0}$\\
+  $\myhat{L}$& $\left(\mytilde{\nu}_e, \mytilde{e}\right)$& $\left(\nu_L, e_L\right)$& $\quad\quad\rep{1}{2}{-\frac12}$\\
+  $\myhat{E}^c$& $\mytilde{e}_R^c$& $e_R^c$& $\quad\quad\rep{1}{1}{1}$\\
+  $\myhat{Q}$& $\left(\mytilde{u}_L, \mytilde{d}_L\right)$& $\left(u_L, d_L\right)$& $\quad\quad\rep{3}{1}{\frac16}$\\
+  $\myhat{U}^c$& $\mytilde{u}_R^c$& $u_R^c$& $\quad\quad\rep{3}{1}{-\frac23}$\\
+  $\myhat{D}^c$& $\mytilde{d}_R^c$& $d_R^c$& $\quad\quad\rep{3}{1}{\frac13}$\\
+  $\myhat{H}_u$& $\left(H_u^+, H_u^0\right)$& $\left(\mytilde{H}_u^+, \mytilde{H}_u^0\right)$& $\quad\quad\rep{1}{2}{\frac12}$\\
+  $\myhat{H}_d$& $\left(H_d^0, H_d^-\right)$& $\left(\mytilde{H}^0_d, \mytilde{H}_d^-\right)$& $\quad\quad\rep{1}{2}{-\frac12}$
 \end{tabular}
 \end{table}
 \end{frame}
@@ -114,8 +114,8 @@ For the gauge part the ususal field strength super fields $\mathcal{W}_{i, \alph
 \end{align}
 The kinetic terms for the fields read:
 \begin{align}
-  \mathcal{L}^\mathrm{MSSM}_K\supset&\int\dd^2\theta\dd^2\bar{\theta}\left[\hat{\Phi}^\dagger_ie^{2V_i}\hat{\Phi}_i\right]_\numb{1}\\
-  V_i=&\hat{V}_8^a\mathcal{R}_i(T_a)+\hat{V}^k\mathcal{R}_i(T_k)+Y_i\hat{V}'.
+  \mathcal{L}^\mathrm{MSSM}_K\supset&\int\dd^2\theta\dd^2\bar{\theta}\left[\myhat{\Phi}^\dagger_ie^{2V_i}\myhat{\Phi}_i\right]_\numb{1}\\
+  V_i=&\myhat{V}_8^a\mathcal{R}_i(T_a)+\myhat{V}^k\mathcal{R}_i(T_k)+Y_i\myhat{V}'.
 \end{align}
 \end{frame}
 
@@ -129,7 +129,7 @@ The superpotential term is simply:
 In general, the superpotential contains a great variety of different terms, under them the Yukawa couplings:
 \begin{align}\nonumber
   W=&\lambda_d\left[H_dQU\right]_\numb{1}+\lambda_d\left[H_dLE\right]_\numb{1}-\lambda_u\left[H_uQU\right]_\numb{1}+\mu \left[H_uH_d\right]_\numb{1}\\
-  &+a\left[\hat{L}\hat{H_u}\right]_\numb{1}+b\left[\hat{Q}\hat{L}\hat{D}\right]_\numb{1}+c\left[\hat{U}\hat{U}\hat{D}\right]_\numb{1}+d\left[\hat{L}\hat{L}\hat{E}\right]_\numb{1}.
+  &+a\left[\myhat{L}\myhat{H_u}\right]_\numb{1}+b\left[\myhat{Q}\myhat{L}\myhat{D}\right]_\numb{1}+c\left[\myhat{U}\myhat{U}\myhat{D}\right]_\numb{1}+d\left[\myhat{L}\myhat{L}\myhat{E}\right]_\numb{1}.
 \end{align}
 }
 \only<3>{
@@ -142,7 +142,7 @@ we can get rid of them. Beware! This is not obligatory!
 $R$-conservation implies the existance of a lightest supersymmetric particle (LSP) thus providing us with a dark matter candidate.
 }
 \only<4>{
-We could use \textit{matter parity}
+We could use \alert{matter parity}
 \begin{align}
 P_\mathrm{m}&=(-1)^{3(B-L)},
 \end{align}
@@ -153,7 +153,7 @@ instead and see directly how the lower line gets thrown out.
 \begin{frame}{MSSM — Soft SUSY breaking terms}
 Introduce explicitly SUSY breaking terms to generate masses and additional interactions
 \begin{align}\nonumber
-  -\mathcal{L}^\mathrm{MSSM}_\mathrm{soft}\supset&\frac12M_i\tilde{\lambda}_i\tilde{\lambda}_i+M^2_{\tilde{F}}\tilde{f}^\dagger\tilde{f}\\
+  -\mathcal{L}^\mathrm{MSSM}_\mathrm{soft}\supset&\frac12M_i\mytilde{\lambda}_i\mytilde{\lambda}_i+M^2_{\mytilde{F}}\mytilde{f}^\dagger\mytilde{f}\\
   &+m_1^2H_d^\dagger H_d+m_2^2H_u^\dagger H_u+m_{12}^2\left(H_uH_d+\hc\right)\\\nonumber
   &+T_UH_uQU+T_DH_dQD+T_EH_dLE+\hc
 \end{align}
@@ -189,62 +189,67 @@ by convention the angle $\beta$ is defined as
 \only<1, 2, 3, 4, 5>{The SM particle spectrum looks like:}
 \only<1>{
 \begin{table}
+{\setlength{\extrarowheight}{5pt}
 \begin{tabular}{cccccc}
 $u$& $c$& $t$&& $\color{red}{B}$& $\color{red}{W^0}$\\
 $d$& $s$& $b$&& $g$& $W^\pm$\\\\
 $e$& $\mu$& $\tau$&& $h^0$&\\
 $\nu_e$& $\nu_\mu$& $\nu_\tau$&&&
 \end{tabular}
-\end{table}
+}\end{table}
 }
 \only<2>{
 \begin{table}
+{\setlength{\extrarowheight}{5pt}
 \begin{tabular}{cccccc}
 $u$& $c$& $t$&& $\color{red}{B}$& $\color{red}{W^0}$\\
 $d$& $s$& $b$&& $g$& $W^\pm$\\\\
 $e$& $\mu$& $\tau$&& $\color{purple}{H_d^-}$&$\color{orange}{H_d^0}$\\
 $\nu_e$& $\nu_\mu$& $\nu_\tau$&&$\color{orange}{H_u^0}$&$\color{purple}{H_u^+}$
 \end{tabular}
-\end{table}
+}\end{table}
 }
 \only<3, 4, 5>{
 \begin{table}
+{\setlength{\extrarowheight}{5pt}
 \begin{tabular}{cccccc}
 $u$& $c$& $t$&& $\color{red}{\gamma}$& $\color{red}{Z^0}$\\
 $d$& $s$& $b$&& $g$& $W^\pm$\\\\
 $e$& $\mu$& $\tau$&& $\color{orange}{h^0}$&$\color{orange}{H^0}$\\
 $\nu_e$& $\nu_\mu$& $\nu_\tau$&&$A^0$&$\color{purple}{H^\pm}$
 \end{tabular}
-\end{table}
+}\end{table}
 }
 \only<4, 5>{The MSSM particle spectrum\only<5>{\footnote{Worst case scenario.}} looks like:}
 \only<4>{
 \begin{table}
+{\setlength{\extrarowheight}{5pt}
 \begin{tabular}{ccccccccc}
-$\color{olive}{\tilde{u}_L}$&$\color{olive}{\tilde{u}_R}$&$\color{olive}{\tilde{c}_L}$&$\color{olive}{\tilde{c}_R}$&$\color{olive}{\tilde{t}_L}$&$\color{olive}{\tilde{t}_R}$&&$\color{red}{\tilde{B}}$&$\color{red}{\tilde{W}^0}$\\
-$\color{cyan}{\tilde{d}_L}$&$\color{cyan}{\tilde{d}_R}$&$\color{cyan}{\tilde{s}_L}$&$\color{cyan}{\tilde{s}_R}$&$\color{cyan}{\tilde{b}_L}$&$\color{cyan}{\tilde{b}_R}$&&$\tilde{g}$&$\color{orange}{\tilde{W}^\pm}$\\\\
-$\color{purple}{\tilde{e}_L}$&$\color{purple}{\tilde{e}_R}$&$\color{purple}{\tilde{\mu}_L}$&$\color{purple}{\tilde{\mu}_R}$&$\color{purple}{\tilde{\tau}_L}$&$\color{purple}{\tilde{\tau}_R}$&&$\color{orange}{\tilde{H}_d^-}$&$\color{red}{\tilde{H}^0_d}$\\
-$\color{brown}{\tilde{\nu}_e}$&&$\color{brown}{\tilde{\nu}_\mu}$&&$\color{brown}{\tilde{\nu}_\tau}$&&&$\color{red}{\tilde{H}_u^0}$&$\color{orange}{\tilde{H}^+_u}$
+$\color{olive}{\mytilde{u}_L}$&$\color{olive}{\mytilde{u}_R}$&$\color{olive}{\mytilde{c}_L}$&$\color{olive}{\mytilde{c}_R}$&$\color{olive}{\mytilde{t}_L}$&$\color{olive}{\mytilde{t}_R}$&&$\color{red}{\mytilde{B}}$&$\color{red}{\mytilde{W}^0}$\\
+$\color{cyan}{\mytilde{d}_L}$&$\color{cyan}{\mytilde{d}_R}$&$\color{cyan}{\mytilde{s}_L}$&$\color{cyan}{\mytilde{s}_R}$&$\color{cyan}{\mytilde{b}_L}$&$\color{cyan}{\mytilde{b}_R}$&&$\mytilde{g}$&$\color{orange}{\mytilde{W}^\pm}$\\\\
+$\color{purple}{\mytilde{e}_L}$&$\color{purple}{\mytilde{e}_R}$&$\color{purple}{\mytilde{\mu}_L}$&$\color{purple}{\mytilde{\mu}_R}$&$\color{purple}{\mytilde{\tau}_L}$&$\color{purple}{\mytilde{\tau}_R}$&&$\color{orange}{\mytilde{H}_d^-}$&$\color{red}{\mytilde{H}^0_d}$\\
+$\color{brown}{\mytilde{\nu}_e}$&&$\color{brown}{\mytilde{\nu}_\mu}$&&$\color{brown}{\mytilde{\nu}_\tau}$&&&$\color{red}{\mytilde{H}_u^0}$&$\color{orange}{\mytilde{H}^+_u}$
 \end{tabular}
-\end{table}
+}\end{table}
 }
 \only<5>{
 \begin{table}
+{\setlength{\extrarowheight}{5pt}
 \begin{tabular}{ccccccccc}
-$\color{olive}{\tilde{q}_1}$&$\color{olive}{\tilde{q}_2}$&$\color{olive}{\tilde{q}_3}$&$\color{olive}{\tilde{q}_4}$&$\color{olive}{\tilde{q}_5}$&$\color{olive}{\tilde{q}_6}$&&$\color{orange}{\tilde{\chi}^\pm_1}$&$\color{orange}{\tilde{\chi}^\pm_2}$\\
-$\color{cyan}{\tilde{q}'_1}$&$\color{cyan}{\tilde{q}'_2}$&$\color{cyan}{\tilde{q}'_3}$&$\color{cyan}{\tilde{q}'_4}$&$\color{cyan}{\tilde{q}'_5}$&$\color{cyan}{\tilde{q}'_6}$&&$\tilde{g}$&\\\\
-$\color{purple}{\tilde{\ell}_1}$&$\color{purple}{\tilde{\ell}_2}$&$\color{purple}{\tilde{\ell}_3}$&$\color{purple}{\tilde{\ell}_4}$&$\color{purple}{\tilde{\ell}_5}$&$\color{purple}{\tilde{\ell}_6}$&&$\color{red}{\tilde{\chi}^0_1}$&$\color{red}{\tilde{\chi}^0_2}$\\
-$\color{brown}{\tilde{\nu}_1}$&&$\color{brown}{\tilde{\nu}_2}$&&$\color{brown}{\tilde{\nu}_3}$&&&$\color{red}{\tilde{\chi}^0_3}$&$\color{red}{\tilde{\chi}^0_4}$
+$\color{olive}{\mytilde{q}_1}$&$\color{olive}{\mytilde{q}_2}$&$\color{olive}{\mytilde{q}_3}$&$\color{olive}{\mytilde{q}_4}$&$\color{olive}{\mytilde{q}_5}$&$\color{olive}{\mytilde{q}_6}$&&$\color{orange}{\mytilde{\chi}^\pm_1}$&$\color{orange}{\mytilde{\chi}^\pm_2}$\\
+$\color{cyan}{\mytilde{q}'_1}$&$\color{cyan}{\mytilde{q}'_2}$&$\color{cyan}{\mytilde{q}'_3}$&$\color{cyan}{\mytilde{q}'_4}$&$\color{cyan}{\mytilde{q}'_5}$&$\color{cyan}{\mytilde{q}'_6}$&&$\mytilde{g}$&\\\\
+$\color{purple}{\mytilde{\ell}_1}$&$\color{purple}{\mytilde{\ell}_2}$&$\color{purple}{\mytilde{\ell}_3}$&$\color{purple}{\mytilde{\ell}_4}$&$\color{purple}{\mytilde{\ell}_5}$&$\color{purple}{\mytilde{\ell}_6}$&&$\color{red}{\mytilde{\chi}^0_1}$&$\color{red}{\mytilde{\chi}^0_2}$\\
+$\color{brown}{\mytilde{\nu}_1}$&&$\color{brown}{\mytilde{\nu}_2}$&&$\color{brown}{\mytilde{\nu}_3}$&&&$\color{red}{\mytilde{\chi}^0_3}$&$\color{red}{\mytilde{\chi}^0_4}$
 \end{tabular}
-\end{table}
+}\end{table}
 }
 \only<6>{
 Summary of mixed states:
 \begin{itemize}
-\item The charged gauginos ($\tilde{W}^\pm$, $\tilde{H}_u^+$, $\tilde{H}_d^-$) form the charginos $\tilde{\chi}^\pm_i$.
-\item The neutral gauginos ($\tilde{B}$, $\tilde{W}^0$, $\tilde{H}_u^0$, $\tilde{H}_d^0$) form the neutralinos $\tilde{\chi}^0_i$.
-\item The squarks ($\tilde{q}_{i, L}$, $\tilde{q}_{i, R}$) form mass eigenstates labeled $\tilde{q}_i$.
-\item The sleptons ($\tilde{e}_{i, L}$, $\tilde{e}_{i, R}$) form eigenstates $\tilde{\ell}_i$.
+\item The charged gauginos ($\mytilde{W}^\pm$, $\mytilde{H}_u^+$, $\mytilde{H}_d^-$) form the charginos $\mytilde{\chi}^\pm_i$.
+\item The neutral gauginos ($\mytilde{B}$, $\mytilde{W}^0$, $\mytilde{H}_u^0$, $\mytilde{H}_d^0$) form the neutralinos $\mytilde{\chi}^0_i$.
+\item The squarks ($\mytilde{q}_{i, L}$, $\mytilde{q}_{i, R}$) form mass eigenstates labeled $\mytilde{q}_i$.
+\item The sleptons ($\mytilde{e}_{i, L}$, $\mytilde{e}_{i, R}$) form eigenstates $\mytilde{\ell}_i$.
 \item The Higgs bosons ($H_d^-$, $H_d^0$, $H_u^0$, $H_u^+$) form: a charged pair $H^\pm$, two CP-even neutral scalars $h^0$, $H^0$ and a CP-odd $A^0$.
 \end{itemize}
 Only for certain ranges of the parameters the particle spectrum will resemble a 'double-SM'.
@@ -258,7 +263,7 @@ Only for certain ranges of the parameters the particle spectrum will resemble a 
 \item 3 (complex) gaugino masses $M_i$ (6 parameters)
 \item 2 Higgs mass parameters $v$, $\beta$ (2 parameters)
 \item 2 (complex) Higgs/ino mass parameters $\mu$, $B$ (4 parameters)
-\item 5 hermitian scalar mass matrices $M^2_{\tilde{F}}$ (5x9 parameters) 
+\item 5 hermitian scalar mass matrices $M^2_{\mytilde{F}}$ (5x9 parameters) 
 \item 3 mass matrices $\lambda^f$ (3x18 parameters)
 \item 3 trilinear couplings $T_F$ (3x18 parameters)
 \end{itemize}
