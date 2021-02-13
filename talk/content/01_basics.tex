@@ -64,7 +64,7 @@ For our three types of massive fermions (electron, up-quark, down-quark) the cor
 \only<4>{
 Furthermore, the SM consists of three generations of fermions thus promoting the $\lambda^\psi$ to complex 3x3 matrices $\lambda^e_{mn}$, $\lambda^d_{mn}$ and $\lambda^u_{mn}$. The $\lambda^f_{mn}$ can be diagonalised via bi-unitary transformations:
 \begin{align}
-  V_f^\dagger\lambda^fU_f&\propto\operatorname{diag}\left(m^{(1)}_f, m^{(2)}_f, m^{(3)}_f\right).
+  V_f^\dagger\lambda^fU_f&\propto\operatorname{diag}\left(m^{(1)}_f, m^{(2)}_f, m^{(3)}_f\right)/v.
 \end{align}
 }
 }
@@ -85,7 +85,7 @@ Count parameters and gauge redundancies:
 \item Lepton flavour symmetry $\un(3)_{\ell_L}\times\un(3)_{e_R}/\un(1)_{L_e}\times\un(1)_{L_\mu}\times\un(1)_{L_\tau}$ (2x9-3 parameters)
 \end{itemize}
 }\vfill
-\only<3>{The Standard Model of Particle Physics has 19 free parameters with $v$ being the only one carrying a physical dimension.\footnote{15 real parameters, 3 mixing angles, 1 CP-violating phase.}}
+\only<3>{The Standard Model of Particle Physics has 19 free parameters with $v$ being the only one carrying a physical dimension.\footnote{14 real parameters, 3 mixing angles, 2 CP-violating phase.}}
 \end{frame}
 \section{The MSSM}
 \subsection{Basics}
@@ -130,7 +130,7 @@ The superpotential term is simply:
 \only<2, 3, 4>{
 In general, the superpotential contains a great variety of different terms, under them the Yukawa couplings:
 \begin{align}\nonumber
-  W=&\lambda_d\left[H_dQD\right]_\numb{1}+\lambda_e\left[H_dLE\right]_\numb{1}-\lambda_u\left[H_uQU\right]_\numb{1}+\mu \left[H_uH_d\right]_\numb{1}\\
+  W=&\lambda_d\left[\hat{H_d}\hat{Q}\hat{D}\right]_\numb{1}+\lambda_e\left[\hat{H_d}\hat{L}\hat{E}\right]_\numb{1}-\lambda_u\left[\hat{H_u}\hat{Q}\hat{U}\right]_\numb{1}+\mu \left[\hat{H_u}\hat{H_d}\right]_\numb{1}\\
   &+a\left[\hat{L}\hat{H_u}\right]_\numb{1}+b\left[\hat{Q}\hat{L}\hat{D}\right]_\numb{1}+c\left[\hat{U}\hat{U}\hat{D}\right]_\numb{1}+d\left[\hat{L}\hat{L}\hat{E}\right]_\numb{1}.
 \end{align}
 }
@@ -156,7 +156,7 @@ instead and see directly how the lower line gets thrown out.
 Introduce explicitly SUSY breaking terms to generate masses and additional interactions
 \begin{align}\nonumber
   -\mathcal{L}^\mathrm{MSSM}_\mathrm{soft}\supset&\frac12M_i\tilde{\bar{\lambda}}_i\tilde{\lambda}_i+M^2_{\tilde{F}}\tilde{f}^\dagger\tilde{f}\\
-  &+m_1^2H_d^\dagger H_d+m_2^2H_u^\dagger H_u+m_{12}^2\left(H_uH_d+\hc\right)\\\nonumber
+  &+m_1^2H_d^\dagger H_d+m_2^2H_u^\dagger H_u+m_{12}^2\left(H_u\cdot H_d+\hc\right)\\\nonumber
   &+T_UH_u\tilde{Q}\tilde{U}+T_DH_d\tilde{Q}\tilde{D}+T_EH_d\tilde{L}\tilde{E}+\hc
 \end{align}
 Often, a parametrisation $m_{12}^2=\mu B$ (and $T_F=\lambda_f A_F$) is chosen. Therefore, the corresponding terms are called A and B-terms.
@@ -192,8 +192,8 @@ At tree level this implies an upper bound on the mass of the lightest Higgs:
 \end{align}
 }
 \end{frame}
-\subsection{Mixing Caveats}
-\begin{frame}{MSSM — Mixing in the particle spectrum}
+\subsection{Particle spectrum}
+\begin{frame}{MSSM — Mixing caveats}
 \only<1, 2, 3, 4, 5>{The SM particle spectrum looks like:}
 \only<1>{
 \begin{table}
@@ -254,11 +254,12 @@ $\color{brown}{\tilde{\nu}_1}$&&$\color{brown}{\tilde{\nu}_2}$&&$\color{brown}{\
 \only<6>{
 Summary of mixed states:
 \begin{itemize}
+\item The Higgs bosons ($H_d^-$, $H_d^0$, $H_u^0$, $H_u^+$) form: a charged pair $H^\pm$, two CP-even neutral scalars $h^0$, $H^0$ and a CP-odd $A^0$.
+\item The sneutrinos $\tilde{\nu}_i$ form eigenstates $\tilde{\nu}_i$.
 \item The charged bosinos ($\tilde{W}^\pm$, $\tilde{H}_u^+$, $\tilde{H}_d^-$) form the charginos $\tilde{\chi}^\pm_i$.
 \item The neutral bosinos ($\tilde{B}$, $\tilde{W}^0$, $\tilde{H}_u^0$, $\tilde{H}_d^0$) form the neutralinos $\tilde{\chi}^0_i$.
 \item The squarks ($\tilde{q}_{i, L}$, $\tilde{q}_{i, R}$) form mass eigenstates labeled $\tilde{q}_i$.
 \item The sleptons ($\tilde{e}_{i, L}$, $\tilde{e}_{i, R}$) form eigenstates $\tilde{\ell}_i$.
-\item The Higgs bosons ($H_d^-$, $H_d^0$, $H_u^0$, $H_u^+$) form: a charged pair $H^\pm$, two CP-even neutral scalars $h^0$, $H^0$ and a CP-odd $A^0$.
 \end{itemize}
 Only for certain ranges of the parameters the particle spectrum will resemble a 'double-SM'.
 }
