@@ -5,7 +5,7 @@
 
 \section{The Standard Model}
 \subsection{Basics}
-\begin{frame}{Standard Model — The Basics}
+\begin{frame}{Standard Model — The Basics\only<5>{ (Well, more or less...)}}
 \only<1, 2, 4>{The gauge group of the Standard Model (SM) is
 \begin{align*}
   \mathcal{G}_\mathrm{SM}&=\su(3)_C\times\su(2)_T\times\un(1)_Y.
@@ -62,7 +62,7 @@ The fermions gain masses \mbox{$m_\psi=v\lambda^\psi$} when the Higgs field acqu
 \begin{align*}
   \left\langle\phi\right\rangle&=\left(\begin{array}{c}0\\v\end{array}\right)\kern4em\color{black}{\left(\text{shorthand: }\color{DarkBlue}{\left\langle\phi_0\right\rangle=v}\color{black}{}\right)},
 \end{align*}
-while the Higgs mass becomes \mbox{$m_h\propto\sqrt{\lambda}v$}.\\
+while the Higgs mass becomes \mbox{$m_h=2\sqrt{\lambda}v$}.\\
 }
 \only<3, 4>{
 For our three types of massive fermions (electron, up-quark, down-quark) the corresponding singlets look like:\footnote{Careful, since $\tilde{\phi}=\epsilon\phi^*$ to account for the u-type quarks.}
@@ -106,7 +106,7 @@ First of all we promote all our previous fields to real (chiral) superfields res
   $\hat{V}_8$& $g$& $\tilde{g}$& $\quad\quad\rep{8}{1}{0}$\\
   $\hat{V}$& $W^0$, $W^\pm$& $\tilde{W}^0$, $\tilde{W}^\pm$& $\quad\quad\rep{1}{3}{0}$\\
   $\hat{V}'$& $B$& $\tilde{B}$& $\quad\quad\rep{1}{1}{0}$\\
-  $\hat{L}$& $(\tilde{\nu}_e, \tilde{e})$& $(\nu_L, e_L)$& $\quad\quad\rep{1}{2}{-\frac12}$\\
+  $\hat{L}$& $(\tilde{\nu}_L, \tilde{e}_L)$& $(\nu_L, e_L)$& $\quad\quad\rep{1}{2}{-\frac12}$\\
   $\hat{E}^c$& $\tilde{e}_R^c$& $e_R^c$& $\quad\quad\rep{1}{1}{1}$\\
   $\hat{Q}$& $(\tilde{u}_L, \tilde{d}_L)$& $(u_L, d_L)$& $\quad\quad\rep{3}{1}{\frac16}$\\
   $\hat{U}^c$& $\tilde{u}_R^c$& $u_R^c$& $\quad\quad\rep{3}{1}{-\frac23}$\\
@@ -124,7 +124,7 @@ First of all we promote all our previous fields to real (chiral) superfields res
 \begin{frame}{MSSM — SUSY terms}
 For the gauge part the ususal field strength super fields
 \begin{align*}
-\mathcal{W}_{i, \alpha}=-\frac14\bar{D}^2e^{-V}D_\alpha e^{V},
+\mathcal{W}_{i, \alpha}=-\frac14\bar{D}^2e^{-\hat{V}}D_\alpha e^{\hat{V}},
 \end{align*}
 are constructed and included in the Lagrangian:
 \begin{align*}
