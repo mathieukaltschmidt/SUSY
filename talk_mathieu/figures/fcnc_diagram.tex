@@ -1,0 +1,46 @@
+\documentclass[tikz, border = 0.6cm]{standalone}
+\input{fig_settings}
+\usepackage{csquotes}
+\usepackage{wasysym}
+\renewcommand{\familydefault}{\sfdefault}
+
+\tikzset{invclip/.style={clip,insert path={{[reset cm]
+      (-\maxdimen,-\maxdimen) rectangle (\maxdimen,\maxdimen)
+    }}}}
+    
+\begin{document}
+
+\begin{tikzpicture}
+%\draw[help lines] (-3,-3) grid (3,3); 
+
+%Z line
+\draw[ultra thick, dashed] (0.98,0) to (3,0);
+\node[text width = 2.5cm, align = center] at (2, 0.4) {\large$Z$};
+
+
+%d1
+\draw[ultra thick,MScRed, ->] (-1,-1) to (0,-0.5);
+\draw[ultra thick,MScRed] (-1,-1) to (1,0);
+\node[text width = 2.5cm, align = center] at (0.4, -1.1) {\large$\tilde{d}$-type};
+
+%d2
+\draw[ultra thick,MScRed, ->] (1,0) to (0,0.5);
+\draw[ultra thick,MScRed] (1,0) to (-1,1);
+\node[text width = 2.5cm, align = center] at (0.4, 1.1) {\large$\tilde{d}$-type};
+
+%s in
+\draw[ultra thick, ->] (-2.5,-2.5) to (-1.75,-1.75);
+\draw[ultra thick] (-2.5,-2.5) to (-1,-1);
+\node[text width = 2.5cm, align = center] at (-1.4, -2) {\large$s$};
+
+%d out
+\draw[ultra thick, ->] (-1,1) to (-1.75,1.75);
+\draw[ultra thick] (-1,1) to (-2.5,2.5);
+\node[text width = 2.5cm, align = center] at (-1.4, 2) {\large$d$};
+
+%Bino
+\draw[ultra thick, dashed] (-1.,-1.02) to (-1,1.02);
+\node[text width = 2.5cm, align = center] at (-1.4, 0) {\large$\tilde{B}$};
+
+\end{tikzpicture}
+\end{document} 

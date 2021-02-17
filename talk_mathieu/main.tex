@@ -1,0 +1,47 @@
+\documentclass[10pt, aspectratio = 169]{beamer}
+
+%Useful settings 
+\include{metadata/settings}
+
+%Main document
+\begin{document}
+\pagenumbering{roman}
+\begin{frame}[plain, noframenumbering]
+\maketitle
+\end{frame}
+
+\begin{frame}[plain, noframenumbering]{Outline}
+  \setbeamertemplate{section in toc}[sections numbered]
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+%Content
+\pagenumbering{arabic}
+\include{content/00_introduction}
+\include{content/01_pheno_models}
+\include{content/02_sugra}
+\include{content/03_unification}
+\include{content/04_beyond_mssm}
+\include{content/05_conclusion}
+
+
+
+
+%Appendices
+\appendix
+\begin{frame}[%allowframebreaks, 
+			  plain,
+			  shrink=10]{References Part I}
+\nocite{*}
+\printbibliography[keyword = {Jonah}]
+
+\end{frame}
+
+\begin{frame}[%allowframebreaks, 
+			  plain,
+			  shrink=10]{References Part II}
+\nocite{*}
+\printbibliography[keyword = {Mathieu}]
+
+\end{frame}
+\end{document}
