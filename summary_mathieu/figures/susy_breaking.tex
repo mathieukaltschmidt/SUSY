@@ -1,0 +1,27 @@
+\documentclass[tikz, border = 0.6cm]{standalone}
+\input{fig_settings}
+\usepackage{csquotes}
+\usepackage{wasysym}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\tikzset{invclip/.style={clip,insert path={{[reset cm]
+      (-\maxdimen,-\maxdimen) rectangle (\maxdimen,\maxdimen)
+    }}}}
+    
+\begin{document}
+
+\begin{tikzpicture}
+%\draw[help lines] (-1,-1) grid (14,8); 
+
+%upper left
+\node[draw, ultra thick, drop shadow, rounded corners, fill = white, black, text=black, minimum size = 1.5cm, align = center ] at (3, 6 ) {SUSY-breaking origin \\ (Hidden sector)};
+
+%upper right
+\node[draw, ultra thick, drop shadow, rounded corners, fill= white, black, text=black, minimum size = 1.5cm, align = center] (pInt) at (10,6) {MSSM \\ (Visible sector)};
+
+
+%Arrows and description
+\draw[ultra thick, dashed] (4.8,6) to (8.7,6);
+\node[text width = 2.5cm, align = center, MScRed] at (6.75, 6.5) {Interactions};
+\end{tikzpicture}
+\end{document} 

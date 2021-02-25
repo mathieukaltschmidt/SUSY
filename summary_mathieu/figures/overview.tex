@@ -1,0 +1,50 @@
+\documentclass[tikz, border = 0.6cm]{standalone}
+\input{fig_settings}
+\usepackage{csquotes}
+\usepackage{wasysym}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\tikzset{invclip/.style={clip,insert path={{[reset cm]
+      (-\maxdimen,-\maxdimen) rectangle (\maxdimen,\maxdimen)
+    }}}}
+    
+\begin{document}
+
+\begin{tikzpicture}
+%\draw[help lines] (-1,-1) grid (14,8); 
+
+%Initial Integral (upper left)
+\node[draw, ultra thick, drop shadow, rounded corners, fill = white, black, text=black, minimum size = 1.5cm ] at (2, 6 ) {Standard Model};
+\node[MScRed] at (2,4.8) {\small{no complete description \lightning}};
+
+%First trafo (upper right)
+\node[draw, ultra thick, drop shadow, rounded corners, fill= white, black, text=black, minimum size = 1.5cm] (pInt) at (10.3,6) {\phantom{....}MSSM-124\phantom{....}};
+\node[MScRed] at (10.3, 4.8) {\small{huge parameter space \lightning}};
+
+%DimReg (lower right)
+\node[draw, ultra thick, drop shadow, rounded corners, fill= white, black, text=black, minimum size = 1.5cm] (pInt) at (10.3,1) {\phantom{....}pMSSM\phantom{....}};
+
+\node[MScRed] at (10.3, -0.3) {\small{still too many unknown variables \lightning}};
+
+%SpecReg (lower left)
+\node[draw, ultra thick, drop shadow,  rounded corners, fill= white, black, text=black, minimum size = 1.1cm] (pInt) at (2,1) {\phantom{....}mSUGRA\phantom{....}};
+\node[MScGreen] at (2,0) {\small{few relevant parameters \smiley}};
+
+
+%Arrows and description
+\draw[ultra thick, ->] (5,6) to (7.8,6);
+\node[text width = 2.5cm, align = center] at (6.4, 5.4) {\enquote{minimal} extension};
+\node[text width = 2.5cm, align = center, MScRed] at (6.4, 6.5) {SUSY};
+
+\draw[ultra thick, ->] (10.3,4.3) to (10.3,2.2);
+\node[text width = 2.5cm, align = center] at (11.5, 3.25) {Pheno \\  constraints};
+
+\draw[ultra thick, ->] (7.8,1) to (4.2,1);
+\node[text width = 2.8cm, align = center] at (6, 1.5) {Fine tuning};
+
+\node[text width = 2.8cm, align = center, color = MScGreen] at (6.4, 3.25) {\Large{Experimental access?}};
+\draw[ultra thick, ->] (2.3,1.9) to (4.8,2.8);
+
+
+\end{tikzpicture}
+\end{document} 

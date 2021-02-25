@@ -1,0 +1,51 @@
+\documentclass[tikz, border = 0.6cm]{standalone}
+\input{fig_settings}
+\usepackage{csquotes}
+\usepackage{wasysym}
+\renewcommand{\familydefault}{\sfdefault}
+
+\tikzset{invclip/.style={clip,insert path={{[reset cm]
+      (-\maxdimen,-\maxdimen) rectangle (\maxdimen,\maxdimen)
+    }}}}
+    
+\begin{document}
+
+\begin{tikzpicture}
+%\draw[help lines] (-4,-2) grid (5,2); 
+
+%%%%%% left diagram %%%%%
+
+\draw[ultra thick] (-2,0) circle (0.5);
+\draw[ultra thick, dashed] (-3.5,0) to (-2.5,0);
+\draw[ultra thick, dashed] (-1.5,0) to (-0.5,0);
+\filldraw [ultra thick] (-2.5,0) circle (0.05);
+\filldraw [ultra thick] (-1.5,0) circle (0.05);
+
+\node[align = center] at (-3.2, 0.4) {\large$H$};
+\node[align = center] at (-0.8, 0.4) {\large$H$};
+
+\node[align = center] at (-2, 0.9) {\large$f$};
+\node[align = center] at (-2, -0.9) {\large$\bar{f}$};
+
+
+%%%%%% right diagram %%%%%
+
+
+\draw[ultra thick, dashed] (0.5,0) to (1.5,0);
+\draw[ultra thick, dashed] (2.5,0) to (3.5,0);
+\draw[ultra thick, MScRed] (2,0) circle (0.5);
+\filldraw [ultra thick] (2.5,0) circle (0.05);
+\filldraw [ultra thick] (1.5,0) circle (0.05);
+
+\node[align = center] at (3.2, 0.4) {\large$H$};
+\node[align = center] at (0.8, 0.4) {\large$H$};
+
+\node[align = center, MScRed] at (2, 0.9) {\large$\tilde{f}$};
+\node[align = center, MScRed] at (2, -0.9) {\large$\tilde{\bar{f}}$};
+
+% additional nodes
+\node[align = center] at (4.3, 0) {\large$\approx\  0,$ };
+\node[align = center] at (0, 0) {\large\bfseries$-$};
+
+\end{tikzpicture}
+\end{document} 
