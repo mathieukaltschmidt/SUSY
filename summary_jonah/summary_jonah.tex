@@ -1,5 +1,10 @@
+% !TEX program = xelatex
+% !TEX encoding = utf8
+% !TEX spellcheck = en_UK
+
 \documentclass{scrartcl}
 \include{metadata/settings}
+\include{metadata/definitions}
 
 \begin{document}
 
@@ -8,11 +13,12 @@
 
 %Main content
 \input{content/00_introduction}
-
+\input{content/01_content}
+\input{content/02_conclusion}
 
 %Bibliography
 \newpage
-\nocite{*}
+%\nocite{*}
 \printbibliography[title = References]
 
 \end{document}

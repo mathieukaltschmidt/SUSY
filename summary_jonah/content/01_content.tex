@@ -1,0 +1,221 @@
+% !TEX root = ../summary_jonah.tex
+% !TEX program = xelatex
+% !TEX encoding = utf8
+% !TEX spellcheck = en_UK
+
+\section{Introduction to the Standard Model}\label{sm-basics}
+The Standard Model (SM) of particle physics presents one of the key achievements of modern day particle physics and provides a variety of phenomenological predictions that are experimentally verifiable to high accuracy.
+%%% MORE MORE MORE %%%
+The SM gauge group is given by
+\begin{align}\label{gsm}
+  \gsm&=\su(3)_C\times\su(2)_T\times\un(1)_Y,
+\end{align}
+where each group factor corresponds to a specific kind of interaction in the model.
+The field content of the SM is given by the scalar doublet $\phi$, the gauge vectors $B^\mu$, $W_k^\mu$, $\mathcal{A}_a^\mu$, and three generations of left-handed\footnote{Right-handed fermions can be acommodated for by making use of charge conjugation.} Weyl fermions $\psi_f$~\cite{arthur, pdg}.
+
+\noindent All these fields transform in their respective $\gsm$-representations as can be seen in tab.\,\ref{sm-fields}.
+\begin{table}[H]\centering
+\caption{Field content of the standard model. For the sake of simplicity generational indices are supressed.\label{sm-fields}}
+\begin{tabular}{ccc}
+field& spin& representation\\
+$\phi$&$0$&$\rep{1}{2}{\frac12}$\\
+$q_L$&$\sfrac12$&$\rep{3}{2}{\frac16}$\\
+$u_R^c$&$\sfrac12$&$\rep{3}{1}{-\frac23}$\\
+$d_R^c$&$\sfrac12$&$\rep{3}{1}{\frac13}$\\
+$\ell_L$&$\sfrac12$&$\rep{1}{2}{-\frac12}$\\
+$e_R^c$&$\sfrac12$&$\rep{1}{1}{1}$\\
+$B^\mu$&$1$&$\rep{1}{1}{0}$\\
+$W_k^\mu$&$1$&$\rep{1}{3}{0}$\\
+$\mathcal{A}_a^\mu$&$1$&$\rep{8}{1}{0}$
+\end{tabular}
+\end{table}
+The $\su(2)$-doublets can be identified with the familiar fields as:
+\begin{align}
+\phi=\vect{\phi_+\\\phi_0},\quad\quad q_L=\vect{u_L\\d_L},\quad\quad\ell_L=\vect{\nu_L\\e_L}.
+\end{align}
+After electroweak symmetry breaking, the electric charge is
+\begin{align}
+Q&=Y+T_3,
+\end{align}
+so that the well-known particle spectrum of the SM is recovered~\cite{arthur, pdg}.
+
+\noindent From a theoretical perspective the gauge group in eq.\ \eqref{gsm} is rather unattractive because of its cumbersome structure and the appearance of several distinct and seemingly unrelated representations from which the fields emerge. Theories with simpler gauge groups and fields transforming in fewer representations, would be more appealing if their phenomenology could be broken down to the SM in some suitable low-energy limit. In the literature many such models are discussed, with the \textsc{Georgi-Glashow} model being pivotal in understanding how the SM-representations may originate. Here, $\gsm$ is embedded in the simple group $\su(5)$ and the SM-fields fit neatly into the representations:
+\begin{align}
+  \mathbf{5}&=\rep{3}{1}{-\frac13}\oplus\rep{1}{2}{\frac12}\\
+  \mathbf{10}&=\rep{3}{2}{\frac16}\oplus\crep{3}{1}{-\frac23}\oplus\rep{1}{1}{1}\\
+  \mathbf{24}&=\rep{8}{1}{0}\oplus\rep{1}{3}{0}\oplus\rep{1}{1}{0}\oplus\rep{3}{2}{-\frac53}\oplus\crep{3}{2}{\frac53}.
+\end{align}
+Nevertheless, there are some impediments damping this rather promising result, most strikingly the existance of other fields transforming in the residual representations, which could lead to proton decay and other unwanted processes~\cite{su5}.
+From there, one can go higher and embed $\gsm$, using the $\su(5)$-unification scheme, in higher-dimensional symmetry groups. This could lead to a breaking chain \mbox{$E_8\!\to\!E_7\!\to\!E_6\!\to\!\operatorname{SO}(10)\!\to\!\su(5)\!\to\!\gsm$} motivated by symmetries in current candidates for a Theory of Everything like String Theory~\cite{arthur, pdg, ramond}.
+
+\noindent As expected from gauge theories, the dynamical terms in the SM are constructed out of the field strength tensors, which in turn are obtained from the commutator of their covariant derivatives \mbox{$F^{(i)}_{\mu\nu}\propto[D^{(i)}_\mu, D^{(i)}_\nu]$}:
+\begin{align}
+  \lsm&\supset\frac1{2g_i^2}\tr\left[F^{(i)}_{\mu\nu}F^{(i)\mu\nu}\right].
+\end{align}
+Here, the trace is performed over gauge indices and normalised to $\sfrac12$ in the $\un(1)$-case. The gauge sector thus is determined by the gauge couplings $g_i$.\footnote{Usually, the couplings $g_1$, $g_2$, $g_3$ are called $g'$, $g$, and $g_\mathrm{s}$.}
+ Furthermore, for $\su(3)$ there exist nontrivial gauge transformations related to the fundamental group structure which can not be removed by suitable redefinitions of the fields. These terms are quantified by a parameter $\theta_\mathrm{QCD}$ and contribute a term:
+\begin{align}
+\lsm&\supset\frac{g_\mathrm{s}^2\theta_\mathrm{QCD}}{16\pi^2}\epsilon^{\mu\nu\rho\sigma}\tr\left[F^{(3)}_{\mu\nu}F^{(3)}_{\rho\sigma}\right].
+\end{align}
+Generally, this term will lead to CP-violation in the strong sector, thus making it favourable to set $\theta_\mathrm{QCD}=0$. The effect of a nonzero $\theta_\mathrm{QCD}$ could be measured as an electric dipole moment for the neutron which is heavily supressed by observation constituting the \textit{strong CP-problem}~\cite{arthur, pdg}. Many solutions to this problem are proposed in the literature, a famous example being the \textsc{Peccei-Quinn} proposal promoting $\theta_\mathrm{QCD}$ to a dynamical field~\cite{pq, pq-2}.
+
+\noindent The fermionic fields receive their usual kinetic terms constructed with the covariant derivative in the relevant representation.
+\begin{align}
+  \lsm&\supset\bar{\psi}_i\imag\slashed{D}\psi_i\\
+  D_\mu&=\partial_\mu-\imag qA^k_\mu\mathcal{R}(T_k).
+\end{align}
+For reasons of notational brevity the internal index structure of the fields will be supressed in the following, with exception of the cases where certain caveats must be considered~\cite{arthur, pdg}.
+
+\noindent The terms in the Higgs sector are given in the form of a scalar kinetic term, the quartic potential, and the Yukawa couplings to the fermions:
+\begin{align}
+  \lsm\supset-\left(D^\mu\phi\right)^\dagger\left(D_\mu\phi\right)+\mu\phi^\dagger\phi-\lambda\left(\phi^\dagger\phi\right)^2-\left(\lambda^\psi\left[\bar{\psi}\phi\psi\right]_\numb{1}+\hc\right).
+\end{align}
+The square brackets denote that the contractions of the gauge indices are performed in a gauge invariant way. This will imply that the left-handed fermionic weak isospin doublets are contracted with the Higgs doublet while potentially remaining colour indices are contracted with the right-handed fermion field such, that the whole term couples left- and right-handed fields together, leading to the behaviour expected from a mass term.
+For our three types of massive fermions (up/down-type quarks and charged leptons) the singlets constructible with $\phi$ look like
+\begin{align}
+\lsm&\supset-\lambda^u\left[\bar{q}_L\tilde{\phi}u_R\right]_\numb{1}-\lambda^d\left[\bar{q}_L\phi d_R\right]_\numb{1}-\lambda^e\left[\bar{\ell}_L\phi e_R\right]_\numb{1}+\hc
+\end{align}
+Here, the conjugated field $\tilde{\phi}^\alpha=\epsilon^{\alpha\beta}\phi^*_\beta$ was used to generate masses for the up-type quarks. This will be one of the reasons why an additional Higgs doublet is needed in the MSSM \cite{arthur, pdg, peskin, higgs}.
+
+\noindent In its potential the Higgs field acquires a vacuum ecpectation value (VEV) of
+\begin{align}
+\left\langle\phi_0\right\rangle&=v\equiv\sqrt{\frac\mu{2\lambda}}.
+\end{align}
+Perturbing with a real scalar $h$ around this VEV will lead to the emergence of a mass for the gauge bosons \mbox{$W^\pm_\mu\propto W^1_\mu\mp\imag W^2_\mu$} and $Z^0_\mu$ as well as a massless photon $A_\mu$ from the mixing of $B_\mu$ and $W^3_\mu$ via the process known as \textit{electroweak symmetry breaking}.
+The masses generated are directly related to the respective couplings and the VEV:
+\begin{align}
+m_h&=2\sqrt{\lambda}v\\
+m_f&=v\lambda^f\\
+m_W&=\frac{gv}{\sqrt{2}}\\
+m_Z&=\sqrt{\frac{g^2+{g'}^2}2}v.
+\end{align}
+To make matters more complicated, in the SM three families of fermions are present and the Yukawa couplings $\lambda^f$ are promoted to general complex \mbox{$3\!\times\!3$}- matrices $\lambda^f_{ij}$ which can be diagonalised with bi-unitary flavour transformations
+\begin{align}
+\lambda^f\to V_f^\dagger\lambda^fU_f&=v^{-1}\operatorname{diag}\left(m^{(1)}_f, m^{(2)}_f, m^{(3)}_f\right).
+\end{align}
+Two of these matrices, $V_u$ and $V_d$, will meet again in the gauge interaction part of the Dirac terms and form the \textsc{Cabibbo-Kobayashi-Maskawa} (CKM) matrix in the quark sector.
+On the leptonic side the absence of neutrino masses allows to compensate for these unitary transformations completely~\cite{arthur, pdg}. If right-handed neutrinos would be included, the \textsc{Pontecorvo-Maki-Nakagawa-Sakata} (PMNS) matrix would describe similar effects, although it is – as of today – unknown how neutrinos gain their masses and if they are Dirac or Majorana fermions~\cite{pdg}.
+
+\noindent Given in the form described above, the Standard Model possesses 60 parameters:
+Three gauge couplings $g'$, $g$, $g_\mathrm{s}$, and the vacuum angle $\theta_\mathrm{QCD}$ in the pure gauge sector. The Higgs potential contributes the two parameters $\lambda$ and $v$ as well as 54 parameters from the three Yukawa matrices $\lambda^u$, $\lambda^d$, and $\lambda^e$.\\
+Not all these parameters are physical and as already emphasised, flavour rotations can be used to remove redundant parameters. This would allow a $\un(3)$-transformation for each fermion field-type \mbox{$\psi\in\{q_L, u_R^c, d_R^c, \ell_L, e_R^c\}$}, but the accidental symmetries related to conservation of baryon number $B$ and the lepton numbers $L_e$, $L_\mu$, and $L_\tau$ can not be used to eliminate parameters.\footnote{At this point it should be noted, that the SM would possess a $\un(3)^5$ flavour symmetry in the absence of mass or Yukawa terms, but their existence breaks this symmetry. Because of this, the symmetry-breaking parameters, e.\ g.\ the Yukawa matrices, can be reduced by the flavour rotations comprising the now broken symmetry. Therefore, unbroken accidental symmetries, like baryon and lepton number phase rotations, can not be used to change parameters in the model.} Thus, only the symmetry $\un(3)^5/\un(1)^4$ remains to remove 41 parameters. Henceforth, the Standard Model without neutrino masses depends on 19 free parameters. Out of these, 14 correspond to real values like couplings and masses, while three describe mixing angles and two give CP-violating phases~\cite{arthur, pdg}.
+If neutrino masses were included, together with the PMNS matrix the three neutrino masses would lead to four additional mixing angles and a CP-violating phase. Depending on them being Dirac or Majorana particles, two additional CP-violating phases in the latter case could be present and the SM with massive neutrinos would have 26 or 28 physical parameters~\cite{pdg}.
+
+\section{The Minimal Supersymmetric Standard Model}\label{mssm-basics}
+To obtain a minimal supersymmetric extension of the SM, all previous fields are embedded in corresponding chiral (real) superfields $\hat{\Phi}_i$ ($\hat{V}_i$).
+Furthermore, it must be taken into account that the Higgsino accompanying the Higgs boson from before – now denoted $H_d$ – introduces a gauge anomaly in the model. To correct for this, a second Higgs doublet, called $H_u$, with opposite charge(s) is needed. In addition, it can be seen that the need for a holomorphic superpotential would forbid the Yukawa term giving masses to the up-type quarks and a new independent field $H_u$ must be included, which takes the position of the previously complex conjugated field $\tilde{\phi}$.
+Implementing these considerations leads to the field content of the MSSM depicted in tab.\,\ref{mssm-fields}.
+\begin{table}[H]\centering
+\caption{Table of MSSM-superfields and their components, from~\cite{pdg}.\label{mssm-fields}}
+\bgroup
+\def\arraystretch{1.4}
+\begin{tabular}{cccl}
+  super field& bosonic field& fermionic field& representation\\\hline
+  $\hat{V}_8$& $g$& $\tilde{g}$& $\quad\quad\rep{8}{1}{0}$\\
+  $\hat{V}$& $W^0$, $W^\pm$& $\tilde{W}^0$, $\tilde{W}^\pm$& $\quad\quad\rep{1}{3}{0}$\\
+  $\hat{V}'$& $B$& $\tilde{B}$& $\quad\quad\rep{1}{1}{0}$\\
+  $\hat{L}$& $(\tilde{\nu}_L, \tilde{e}_L)$& $(\nu_L, e_L)$& $\quad\quad\rep{1}{2}{-\frac12}$\\
+  $\hat{E}^c$& $\tilde{e}_R^c$& $e_R^c$& $\quad\quad\rep{1}{1}{1}$\\
+  $\hat{Q}$& $(\tilde{u}_L, \tilde{d}_L)$& $(u_L, d_L)$& $\quad\quad\rep{3}{1}{\frac16}$\\
+  $\hat{U}^c$& $\tilde{u}_R^c$& $u_R^c$& $\quad\quad\rep{3}{1}{-\frac23}$\\
+  $\hat{D}^c$& $\tilde{d}_R^c$& $d_R^c$& $\quad\quad\rep{3}{1}{\frac13}$\\
+  $\hat{H}_u$& $\left(H_u^+, H_u^0\right)$& $\left(\tilde{H}_u^+, \tilde{H}_u^0\right)$& $\quad\quad\rep{1}{2}{\frac12}$\\
+  $\hat{H}_d$& $(H_d^0, H_d^-)$& $(\tilde{H}^0_d, \tilde{H}_d^-)$& $\quad\quad\rep{1}{2}{-\frac12}$
+\end{tabular}
+\egroup
+\end{table}
+\noindent The Lagrangian of the MSSM is constructed out of SUSY conserving terms and SUSY breaking terms where the latter introduce most of the new parameters~\cite{abc, primer, pdg, arthur, haber}.
+
+\noindent The gauge terms are built straightforwardly, using the appropriately\footnote{For the abelian gauge field the definition could be simplified further to \mbox{$\mathcal{W}_\alpha=-\sfrac14\bar{D}^2D_\alpha\hat{V}$}.} defined field strength super fields
+\begin{align}
+\mathcal{W}_{i, \alpha}&\equiv-\frac14\bar{D}^2e^{-\hat{V}_i}D_\alpha e^{\hat{V}_i},
+\end{align}
+in an appropriate gauge.
+The internal gauge dynamics are then given by
+\begin{align}
+  \lmssm\supset&\frac1{2g_i^2}\tr\left[\int\dd^2\theta\mathcal{W}_i^\alpha\mathcal{W}_{i, \alpha}+\hc\right].
+\end{align}
+The $\theta$-parameter can be included by complexifying\footnote{The key idea would be to go from a real coupling $\sfrac1{2g_i^2}$ to complex \mbox{$\tau\equiv\sfrac{1}{2g_\mathrm{s}^2}-\sfrac{\imag g_\mathrm{s}^2\theta_\mathrm{QCD}}{16\pi^2}$} and respecting $\tau$ in the hermitian conjugates.} the gauge coupling~\cite{lykken, primer, abc}.
+The kinetic Kähler terms just become
+\begin{align}
+  \lmssm\supset&\int\dd^2\theta\dd^2\bar{\theta}\left[\hat{\Phi}^\dagger_ie^{2\hat{V}_i}\hat{\Phi}_i\right]_\numb{1}\\
+  \hat{V}_i\equiv&\hat{V}_8^a\mathcal{R}_i(T_a)+\hat{V}^k\mathcal{R}_i(T_k)+Y_i\hat{V}'.
+\end{align}
+The $D$-terms in the Higgs sector of this potential will lead to the emergence of a quartic term in the effective Higgs potential for the two doublets. This has rather suprising consequences – at least at tree level – for the mass of the lightest Higgs field, but more on this in section~\ref{mssm-details}.
+In the MSSM, a quartic coupling of Higgs fields can not be included in the superpotential interaction terms since it would be non-renormalisable~\cite{higgs, haber, pdg}.
+
+\noindent When considering the contributions
+\begin{align}
+  \lmssm\supset&\int\dd^2\theta W(\hat{\Phi}_i)+\hc
+\end{align}
+from the superpotential $W$, naïvely all quadratic and cubic terms consisting of holomorphic gauge singlets are allowed leading to
+\begin{align}\nonumber
+  W=&\lambda_d\left[\hat{H}_d\hat{Q}\hat{D}\right]_\numb{1}+\lambda_e\left[\hat{H}_d\hat{L}\hat{E}\right]_\numb{1}-\lambda_u\left[\hat{H}_u\hat{Q}\hat{U}\right]_\numb{1}+\mu \left[\hat{H}_u\hat{H}_d\right]_\numb{1}\\
+  &+a\left[\hat{L}\hat{H}_u\right]_\numb{1}+b\left[\hat{Q}\hat{L}\hat{D}\right]_\numb{1}+c\left[\hat{U}\hat{U}\hat{D}\right]_\numb{1}+d\left[\hat{L}\hat{L}\hat{E}\right]_\numb{1}.
+\end{align}
+The upper line contains the Yukawa couplings as well as the $\mu$-parameter, which will be the only parameter leading to masses for the Higgsinos.
+Unfortunately the terms in the lower line introduce processes, violating baryon and lepton number conservation, and can not be excluded by renormalisability arguments as in the SM. As often, it would be attractive to rely on a suitable symmetry not obeyed by the unwanted terms. A promising candidate for such a symmetry would be the $\un(1)_R$ R-symmetry, transforming component fields differently, but using it continuously would also forbid the $\mu$-term and lead to massless Higgsinos and therefore striking contradiction with experiment. Breaking $\un(1)_R$ down to R-parity $\mathcal{Z}_2$ circumvents this problem and implies the assignment
+\begin{align}
+R=(-1)^{3(B-L)+2s},
+\end{align}
+for each component field.\footnote{An equivalent assignment makes use of matter parity \mbox{$P_m=(-1)^{3(B-L)}$}, defined on superfields, which can be seen more easily.}
+Restricting to R-parity conservation has the importand consequence that superpartners of the ordinary SM particles can only be produced and annihilated in pairs, implying the existance of a lightest supersymmetric particle (LSP). Being weakly interacting (most probably) massive particles (`WIMPs'), such LSPs are rather attractive aspirants for dark matter particles~\cite{pdg, arthur, primer, abc}.
+
+\noindent In the MSSM, SUSY is broken explicitly and the origin of the breaking terms is not considered. They could originate in a hidden sector, e.\ g.\ via gauge- or gravity-mediation, but in the end both will lead to the inclusion of \textit{soft}\footnote{Soft in this context meaning that the corresponding operators are relevant and therefore have mass dimension strictly below four.} SUSY breaking terms of the form:
+\begin{align}\nonumber
+  -\mathcal{L}^\mathrm{MSSM}_\mathrm{soft}\supset&\frac12M_i\tilde{\bar{\lambda}}_i\tilde{\lambda}_i+M^2_{\tilde{F}}\tilde{f}^\dagger\tilde{f}\\
+  &+m_1^2H_d^\dagger H_d+m_2^2H_u^\dagger H_u+m_{12}^2\left(H_u\cdot H_d+\hc\right)\\\nonumber
+  &+T_UH_u\tilde{Q}\tilde{U}+T_DH_d\tilde{Q}\tilde{D}+T_EH_d\tilde{L}\tilde{E}+\hc
+\end{align}
+The terms in the first line lead to masses and mass differences for the gauginos and sfermions, while the second line contributes to the Higgs potential. Lastly, the third line introduces additional trilinear couplings between the sfermion scalars and the Higgs fields.
+Often a parametrisation\footnote{Here, it should be noted that one has to be careful regarding matrix indices, since it is not clear – at least ad hoc – , how the indices of $A_F$, $\lambda_f$, and $T_F$ are related to each other and there are different conventions. Nevertheless, many models simplify the trilinear couplings to be diagonal in the flavour eigenbasis with only scalar $A$-parameters remaining.} $m_{12}^2=\mu B$ (and $T_F=\lambda_f A_F$) is chosen. Therefore, the corresponding terms are called $A$ and $B$-terms~\cite{pdg, arthur, chung, peskin}.
+
+\noindent Having introduced all parameters, the same counting procedure as in the SM can be repeated for the MSSM. The gauge sector contributes four real parameters with $g$, $g'$, $g_\mathrm{s}$, and $\theta_\mathrm{QCD}$, while the superpotential contains the three Yukawa matrices $\lambda_u$, $\lambda_d$, and $\lambda_e$ (each contributing 18 parameters). Two parameters come from the modulus and phase of $\mu$.
+Most of the parameters are introduced by the SUSY breaking terms: Three generally complex gaugino masses give rise to six parameters, while the five different hermitian scalar mass matrices introduce nine parameters per matrix, and the Higgs-sector adds $v$, $\beta$, and three trilinear scalar coupling matrices $T_F$ with 18 parameters each.
+Using the flavour transformations $\un(3)^5/\un(1)^2$, 43 parameters can be removed. Here, the fixation on lepton number conservation per generation can not be sustained anymore, since many of the additional terms in the MSSM can and will lead to flavour changing processes that were previously supressed strongly in the SM.
+Actually, this is not all, since there exist two additional $\un(1)$ transformations that can be exploited to further remove phases from the MSSM: The before-mentioned R-transformations as well as a so-called Peccei-Quinn symmetry $\un(1)_\mathrm{PQ}$, which can be used to make the gaugino mass $M_3$ and $\mu$ real~\cite{haber}.
+In the end, 45 parameters can be removed from the 169 parameters introduced in the Lagrangian.
+Finally, the full MSSM is given by 124 parameters and this full description is called the MSSM-124. Of these 124 parameters, of which 105 originate in the SUSY breaking terms, 39 will be real values like masses and couplings, 39 will be mixing angles, and 45 will correspond to CP-violating phases~\cite{haber, pdg}.
+
+\section{Phenomenological implications of the MSSM}\label{mssm-details}
+One striking implication of the MSSM is the structure of the Higgs sector:
+The contributions to $V_\mathrm{Higgs}$ come from the $D$-terms in the Kähler potential as well as the soft SUSY breaking terms and lead to a full potential
+\begin{align}\nonumber
+  V_\mathrm{Higgs}=&\left(m_1^2+|\mu|^2\right)H_d^\dagger H_d+\left(m_2^2+|\mu|^2\right)H_u^\dagger H_u+m_{12}^2\left(H_u\cdot H_d+\hc\right)\\
+  &+\frac{g^2+{g'}^2}8\left(H_d^\dagger H_d-H_u^\dagger H_u\right)+\frac12g^2\left|H_d^\dagger H_u\right|^2.
+\end{align}
+After minimising $V_\mathrm{Higgs}$, both doublets acquire VEVs
+\begin{align}
+\left\langle H_f^0\right\rangle&=v_f,
+\end{align}
+which can be related to the previous $v$ via
+\begin{align}
+v^2=v_u^2+v_d^2.
+\end{align}
+By convention, an angle $\beta$ is defined between the $v_f$ as
+\begin{align}
+  \tan\beta&=\frac{v_u}{v_d}.
+\end{align}
+Since the quartic coupling is given as function of the weak coupling constant, this implies an \textit{upper bound} on the mass of the lightest Higgs boson – at least on tree level – of
+\begin{align}
+  m^2_h&\le m^2_Z\cos^22\beta.
+\end{align}
+This bound relaxes at higher loop order where suitable corrections lift this bound as high as $\SI{135}{\GeV}$, removing the contradiction present before~\cite{pdg, higgs, peskin, primer, haber}.
+
+\noindent The most interesting aspects can be found in the particle spectrum:
+With its superfields the MSSM gives rise to a luscious landscape of new particles to observe, but the additional fields include many new possibilities for mixing, modifying the expectable spectrum of new particles.
+On the SM side of the MSSM, the particle content remains relatively unchanged with exception of the Higgs boson, which is now replaced by additional Higgs bosons coming from the second doublet. The real perturbations of the $H^0_f$ around $v_f$ will mix to form two CP-even scalars denoted by $h^0$ and $H^0$ (capital letter corresponding to larger mass), while their imaginary counterparts form a CP-odd scalar $A^0$ and a neutral Goldstone boson $G^0$, which is later eaten as part of the Higgs mechanism's inner mechanics, giving rise to longitudinal modes and therefore masses for the $W$ and $Z$ bosons. Similarly, the charged components, $H^+_u$ and $H^-_d$, will mix forming two charged Higgs bosons $H^\pm$ and two Goldstone bosons $G^\pm$. In total, the contribution from the additional doublet leads to four new Higgs bosons $H^0$, $H^\pm$, and $A^0$~\cite{higgs, peskin, primer}.
+The Higgsinos will mix with the other weakly charged gauginos present.
+The neutral Higgsinos $\tilde{H}^0_u$ and $\tilde{H}^0_d$ are now accompanied by the bino $\tilde{B}^0$ and the neutral wino $\tilde{W}^0_3$ so that mixing will be described by a complex \mbox{$4\!\times\!4$}-matrix and result in four neutral physical mass eigenstates, called \textit{neutralinos} and denoted $\tilde{\chi}^0_i$, their index incrementing with increasing mass. Accordingly, the charged winos $\tilde{W}^\pm$ will mix with the charged Higgsinos $\tilde{H}^\pm$ and form two (actually four) chargino states, denoted $\tilde{\chi}^\pm_i$.
+Considering the sfermions, the scalar superpartners of the SM-fermions, it must be noted that there are two superpartners per (charged) fermion $f$ (with exception of the neutrinos): One scalar partner for the left-handed component $\tilde{f}_L$, one for the right-handed component $\tilde{f}_R$. Generally, mixing can and will occur between these different fields if they carry the same charges, thus leading to \mbox{$6\!\times\!6$}-mixing for the up/down-type squarks ($\tilde{q}_L$, $\tilde{q}_R$) and the charged sleptons ($\tilde{\ell}_L$, $\tilde{\ell}_R$). For the sneutrinos only \mbox{$3\!\times\!3$}-mixing is present. In the end, only mass eigenstates $\tilde{u}_i$, $\tilde{d}_i$, $\tilde{\ell}_i$, and $\tilde{\nu}_i$ will remain, whose identification with flavour eigenstates will be highly dependent on the parameters at play.
+\begin{table}[H]\centering
+\caption{Examples for parameter configurations leading to nearly pure gaugino states. Adapted from~\cite{pdg}.\label{gaugino}}
+\begin{tabular}{cc}
+parameter conditions&$\tilde{\chi}^{0, \pm}_1$\\\hline
+$\left|M_1\right|, \left|M_2\right|\lesssim\left|\mu\right|, m_Z$&$\tilde{\gamma}$\\
+$\left|M_1\right|, m_Z\lesssim\left|M_2\right|, \left|\mu\right|$&$\tilde{B}$\\
+$\left|M_2\right|, m_Z\lesssim\left|M_1\right|, \left|\mu\right|$&$\tilde{W}^{0, \pm}$\\
+$\left|\mu\right|, m_Z\lesssim\left|M_1\right|, \left|M_2\right|$&$\tilde{H}^{0, \pm}$
+\end{tabular}
+\end{table}
+\noindent By this it becomes apparent that only very specific configurations in parameter space will lead to a `double-SM'-structure of the MSSM, and the phenomenology depends delicatly on the parameters~\cite{pdg, peskin}. Some examples for such configurations can be found in tab.\,\ref{gaugino}.
